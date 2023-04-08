@@ -35,6 +35,11 @@ def kaiheila_bot():
 	entry.main()
 
 
+def irc_bot():
+        from chatbridge.impl.irc import entry
+        entry.main()
+
+
 def main():
 	if len(sys.argv) == 2:
 		arg = sys.argv[1]
@@ -51,4 +56,5 @@ def main():
 		print('{} cqhttp_bot: Start a CQ-Http bot as client'.format(prefix))
 		print('{} kaiheila_bot: Start a Kaiheila bot as client'.format(prefix))
 		print('{} online_command: Start a OnlineCommand bot as client'.format(prefix))
+		print('{} irc_bot: Start a IRC bot as client'.format(prefix))
 
